@@ -12,11 +12,10 @@ export function TopNav() {
       transition={{ duration: 0.5 }}
       className="fixed top-4 left-0 right-0 z-30 px-4 md:px-8"
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3">
-        <div className="shadow-soft flex flex-wrap items-center gap-3 rounded-full border border-white/10 bg-[color:var(--glass)] px-4 py-2 backdrop-blur-[14px]">
+      <div className="mx-auto flex w-full max-w-6xl flex-nowrap items-center justify-between gap-2 md:gap-3">
+        <div className="shadow-soft flex flex-nowrap items-center gap-2 rounded-full border border-white/10 bg-[color:var(--glass)] px-3 py-1.5 backdrop-blur-[14px] md:gap-3 md:px-4 md:py-2">
           <span
-            className="light-font rounded-full border border-white/10 bg-black/50 px-3 py-1 text-[10px] uppercase tracking-[0.3em]                      
-  text-[color:var(--muted)]"
+            className="light-font rounded-full border border-white/10 bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-[0.22em] text-[color:var(--muted)] sm:text-[10px] sm:tracking-[0.3em]"
           >
             {portfolioData.name}
           </span>
@@ -62,10 +61,10 @@ export function TopNav() {
             </a>
           </div>
         </div>
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           {portfolioData.social.github ? (
             <a
-              className="shadow-soft flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[color:var(--glass)] text-[color:var(--muted)] backdrop-blur-[14px] transition hover:text-[color:var(--text)]"
+              className="shadow-soft flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-[color:var(--glass)] text-[color:var(--muted)] backdrop-blur-[14px] transition hover:text-[color:var(--text)] sm:h-9 sm:w-9"
               href={portfolioData.social.github}
               aria-label="GitHub"
             >
@@ -74,7 +73,7 @@ export function TopNav() {
           ) : null}
           {portfolioData.social.linkedin ? (
             <a
-              className="shadow-soft flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[color:var(--glass)] text-[color:var(--muted)] backdrop-blur-[14px] transition hover:text-[color:var(--text)]"
+              className="shadow-soft flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-[color:var(--glass)] text-[color:var(--muted)] backdrop-blur-[14px] transition hover:text-[color:var(--text)] sm:h-9 sm:w-9"
               href={portfolioData.social.linkedin}
               aria-label="LinkedIn"
             >
@@ -83,7 +82,7 @@ export function TopNav() {
           ) : null}
           {portfolioData.social.email ? (
             <a
-              className="shadow-soft flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[color:var(--glass)] text-[color:var(--muted)] backdrop-blur-[14px] transition hover:text-[color:var(--text)]"
+              className="shadow-soft flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-[color:var(--glass)] text-[color:var(--muted)] backdrop-blur-[14px] transition hover:text-[color:var(--text)] sm:h-9 sm:w-9"
               href={`mailto:${portfolioData.social.email}`}
               aria-label="Email"
             >
