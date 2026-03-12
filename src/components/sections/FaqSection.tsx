@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What tech stack do you specialize in?",
     answer:
-      "I specialize in the MERN stack, React, React Native, and Next.js for scalable web and mobile applications.",
+      "I specialize in the MERN stack, React Native, and Next.js for scalable web and mobile applications.",
   },
   {
     question: "Can you build admin dashboards and internal tools?",
