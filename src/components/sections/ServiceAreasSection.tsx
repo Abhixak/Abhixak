@@ -9,7 +9,7 @@ const areas = [
 
 export function ServiceAreasSection() {
   return (
-    <section id="service-areas" className="section-surface relative overflow-hidden py-16 md:py-24">
+    <section id="service-areas" className="section-surface relative overflow-hidden py-6">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <Reveal>
           <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-[color:var(--muted)] before:h-px before:w-8 before:bg-gradient-to-r before:from-[color:var(--muted)]/70 before:to-transparent before:content-['']">

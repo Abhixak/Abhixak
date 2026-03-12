@@ -29,7 +29,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="relative pt-14 md:pt-24">
+    <main className="relative pt-14 md:pt-4">
       <CursorGlow />
       <TopNav />
       <section className="section-surface relative overflow-hidden py-16 md:py-24">
