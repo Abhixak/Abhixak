@@ -4,7 +4,6 @@ const areas = [
   "Mohali",
   "Chandigarh",
   "Delhi NCR",
-  "Bangalore",
   "Global Remote",
 ];
 

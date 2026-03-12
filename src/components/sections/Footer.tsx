@@ -9,9 +9,9 @@ export function Footer() {
         <div className="flex items-center gap-4">
           <a
             className="flex items-center gap-2 transition hover:text-[color:var(--text)]"
-            href="#service-areas"
+            href="/services"
           >
-            Service Areas
+            Services
           </a>
           <a className="flex items-center gap-2 transition hover:text-[color:var(--text)]" href="#faq">
             FAQ
