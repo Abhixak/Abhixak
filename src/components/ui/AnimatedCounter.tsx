@@ -1,16 +1,21 @@
 "use client";
 
-import { animate, useInView, useMotionValue } from "framer-motion";
+import { animate, useInView, useMotionValue, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export function AnimatedCounter({ value }: { value: number }) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-20%" });
   const motionValue = useMotionValue(0);
+  const prefersReducedMotion = useReducedMotion();
   const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     if (!isInView) return;
+    if (prefersReducedMotion) {
+      setDisplay(value);
+      return;
+    }
     motionValue.set(0);
     setDisplay(0);
     const controls = animate(motionValue, value, {
@@ -19,7 +24,7 @@ export function AnimatedCounter({ value }: { value: number }) {
       onUpdate: (latest) => setDisplay(Math.round(latest)),
     });
     return controls.stop;
-  }, [isInView, motionValue, value]);
+  }, [isInView, motionValue, prefersReducedMotion, value]);
 
   useEffect(() => {
     if (isInView) return;
