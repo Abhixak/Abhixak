@@ -44,12 +44,6 @@ export function TopNav() {
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#service-areas"
-            >
-              Service Areas
-            </a>
-            <a
-              className="transition hover:text-[color:var(--text)]"
               href="#education"
             >
               Education
@@ -59,12 +53,6 @@ export function TopNav() {
               href="#experience"
             >
               Journey
-            </a>
-            <a
-              className="transition hover:text-[color:var(--text)]"
-              href="#faq"
-            >
-              FAQ
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"

@@ -7,14 +7,14 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 text-xs uppercase tracking-[0.3em] text-[color:var(--muted)] md:px-10">
         
         <div className="flex items-center gap-4">
-          <a className="flex items-center gap-2 transition hover:text-[color:var(--text)]" href="#about">
-            About
+          <a
+            className="flex items-center gap-2 transition hover:text-[color:var(--text)]"
+            href="#service-areas"
+          >
+            Service Areas
           </a>
-          <a className="flex items-center gap-2 transition hover:text-[color:var(--text)]" href="#projects">
-            Projects
-          </a>
-          <a className="flex items-center gap-2 transition hover:text-[color:var(--text)]" href="#contact">
-            Contact
+          <a className="flex items-center gap-2 transition hover:text-[color:var(--text)]" href="#faq">
+            FAQ
           </a>
         </div>
         <div className="flex items-center gap-3">
