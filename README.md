@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Abhishek Kumar — Full Stack Developer Portfolio
+
+Personal portfolio showcasing projects, skills, services, and contact details.
+
+**Live:** https://abhixak.vercel.app
+
+## Features
+
+- Modern hero with interactive business card
+- Project gallery with live preview screenshots
+- Education, experience, and skills sections
+- Service areas and FAQ
+- SEO metadata + structured data
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- Framer Motion
+- Three.js / @react-three
+
+## Local Setup
 
 ## Getting Started
 
@@ -39,6 +61,11 @@ This is required to generate live project previews using ScreenshotOne.
 
 - Update `src/data/portfolio.ts` when you change keywords, projects, or socials.
 - Update `src/data/portfolio.ts` if your domain changes.
+
+## Contact
+
+- Email: devabhixak@gmail.com
+- LinkedIn: https://www.linkedin.com/in/devabhixak/
 
 ## Learn More
 
