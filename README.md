@@ -18,7 +18,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
+
+Create a `.env.local` file in the project root with:
+
+```bash
+SCREENSHOTONE_API_KEY=your_access_key_here
+```
+
+This is required to generate live project previews using ScreenshotOne.
+
+## Deploy (Vercel)
+
+1. Push the repo to GitHub.
+2. Import the repository into Vercel.
+3. Set the `SCREENSHOTONE_API_KEY` environment variable in Vercel.
+4. Deploy.
+
+## SEO Notes
+
+- Update `src/data/portfolio.ts` when you change keywords, projects, or socials.
+- Update `src/data/portfolio.ts` if your domain changes.
 
 ## Learn More
 
