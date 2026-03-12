@@ -1,0 +1,15 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orbitGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#46cdff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="#0b0f1f"/>
+  <rect x="80" y="80" width="1040" height="540" rx="42" fill="url(#orbitGradient)" opacity="0.12"/>
+  <circle cx="420" cy="360" r="180" stroke="url(#orbitGradient)" stroke-width="4" opacity="0.6"/>
+  <circle cx="420" cy="360" r="90" stroke="white" stroke-width="2" opacity="0.2"/>
+  <rect x="640" y="220" width="420" height="260" rx="28" fill="white" opacity="0.08"/>
+  <text x="120" y="170" fill="white" font-size="42" font-family="Arial" opacity="0.85">Orbit UI</text>
+  <text x="120" y="220" fill="#94a3b8" font-size="22" font-family="Arial">Analytics Dashboard</text>
+</svg>
