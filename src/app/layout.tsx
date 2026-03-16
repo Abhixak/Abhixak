@@ -105,7 +105,7 @@ export default function RootLayout({
         ) : null}
       </head>
       <body
-        className={`${poppins.variable} ${manrope.variable} antialiased`}
+        className={`${poppins.variable} ${manrope.variable} antialiased overflow-x-hidden`}
       >
         <script
           type="application/ld+json"

@@ -1,7 +1,7 @@
 export const portfolioData = {
   name: "Abhishek Kumar",
   title: "Full Stack Developer",
-  tagline: "Building scalable mobile and web applications",
+  tagline: "Product engineering, from problem to solution.",
   availability: "Open to full-time roles and freelance projects",
   siteUrl: "https://abhixak.vercel.app",
   seo: {
@@ -37,8 +37,8 @@ export const portfolioData = {
   location: "Mohali, Punjab, India",
 
   about: `
-  I am a Full Stack Developer with experience in building scalable web and mobile applications. 
-  My expertise includes React.js, React Native, Next.js, Node.js, Express, and MongoDB. I enjoy solving real-world business problems by building efficient digital solutions and continuously improving my skills in modern web technologies.
+  Product-focused Full Stack Developer who translates business problems into clear, usable solutions.
+  Building with React, Next.js, Node, and MongoDB.
   `,
 
 
@@ -83,7 +83,7 @@ export const portfolioData = {
     {
       title: "NRI Property UK",
       description:
-        "Developed and maintained features for nriproperty.uk, an international real estate platform helping NRIs discover and invest in Indian properties with lead enquiry and property listing systems.",
+        "International real estate platform for NRI property leads and listings.",
       tech: ["React", "Tailwind CSS", "Express.js", "Node.js", "MongoDB"],
       demo: "https://nriproperty.uk",
     },
@@ -91,7 +91,7 @@ export const portfolioData = {
     {
       title: "NRI Property Canada",
       description:
-        "Contributed to the development of nriproperty.ca, a regional platform targeting Canadian NRIs interested in Indian real estate investments with enquiry and lead management features.",
+        "Regional NRI property platform with lead capture workflows.",
         tech: ["React", "Email JS", "Tailwind CSS"],
       demo: "https://nriproperty.ca",
     },
@@ -99,7 +99,7 @@ export const portfolioData = {
     {
       title: "NRI Property Europe",
       description:
-        "Worked on nriproperty.eu, a European market real estate platform designed for NRIs to explore property opportunities in India and connect with consultants.",
+        "EU-focused NRI property site with consultant connect.",
         tech: ["React", "Email JS", "Tailwind CSS"],
       demo: "https://nriproperty.eu",
     },
@@ -107,7 +107,7 @@ export const portfolioData = {
     {
       title: "Property Helpline",
       description:
-        "Developed frontend features and platform improvements for propertyhelpline.in, a property assistance platform connecting buyers with property consultants and support services.",
+        "Property support platform connecting buyers with consultants.",
       tech: ["React", "Tailwind CSS"],
       demo: "https://propertyhelpline.in",
     },
@@ -115,7 +115,7 @@ export const portfolioData = {
     {
       title: "Sell Indian Property",
       description:
-        "Worked on sellindianproperty.com, a platform designed for property owners to list and sell properties while generating and managing buyer enquiries.",
+        "Listings platform for owners to sell and manage enquiries.",
       tech: ["React", "Tailwind CSS"],
       demo: "https://sellindianproperty.com",
     },
@@ -123,7 +123,7 @@ export const portfolioData = {
     {
       title: "Pinnacle Expo",
       description:
-        "Developed UI components and web functionality for pinnacleexpo.com, a platform used for international expos and networking events organized by Pinnacle Group.",
+        "Expo platform for events and networking.",
       tech: ["React", "Tailwind CSS"],
       demo: "https://pinnacleexpo.com",
     },
@@ -131,7 +131,7 @@ export const portfolioData = {
     {
       title: "Dimples Beauty Bar",
       description:
-        "Built and maintained dimplesbeautybar.com, a business website showcasing beauty services with modern UI and responsive design.",
+        "Business site for beauty services.",
       tech: ["React", "Email JS", "Tailwind CSS"],
       demo: "https://dimplesbeautybar.com",
     },
@@ -139,7 +139,7 @@ export const portfolioData = {
     {
       title: "Pinnacle World",
       description:
-        "Worked on pinnacleworld.co.uk, a corporate platform representing international business initiatives and services of the organization.",
+        "Corporate platform for international business initiatives.",
       tech: ["React", "Tailwind CSS"],
       demo: "https://pinnacleworld.co.uk",
     },
@@ -147,7 +147,7 @@ export const portfolioData = {
     {
       title: "Internal CRM & Lead Management System",
       description:
-        "Developed an internal CRM platform used by the company to manage leads, sales teams, reporting dashboards, and customer interactions with role-based access and analytics.",
+        "Internal CRM for leads, sales, and reporting.",
       tech: ["React Native", "Node.js", "Express", "MongoDB"],
     },
   ],
@@ -159,7 +159,7 @@ export const portfolioData = {
       company: "Pinnacle Group",
   
       summary:
-        "Working on multiple international real estate and business platforms. As the primary developer, I am responsible for developing and maintaining full-stack features using the MERN stack, building admin dashboards, integrating APIs, optimizing UI performance, and contributing to the company's internal CRM and lead management systems used by sales teams.",
+        "Primary developer for global real estate platforms, dashboards, and CRM systems.",
     },
   
     {
@@ -168,7 +168,7 @@ export const portfolioData = {
       company: "Pisoft Informatics Pvt. Ltd.",
   
       summary:
-        "Completed hands-on training in the MERN stack, where I developed responsive web applications, built REST APIs, implemented authentication systems, and created full-stack projects using React, Node.js, Express, and MongoDB while learning modern development workflows and best practices.",
+        "MERN training with full-stack apps, APIs, and auth systems.",
     },
   ],
 

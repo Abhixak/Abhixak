@@ -58,7 +58,7 @@ export function ContactSection() {
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="mt-4 max-w-3xl font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            Let&apos;s build something exceptional.
+            Let&apos;s build.
           </h2>
         </Reveal>
         <div className="mt-6 grid items-stretch gap-8 lg:grid-cols-[1.05fr_0.95fr]">
@@ -68,27 +68,26 @@ export function ContactSection() {
                 Collaboration
               </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em]">
-                Full-time or freelance engagements.
+                Full-time or freelance.
               </h3>
-              <p className="mt-4 text-[color:var(--muted)]">
-                Share your requirements or hiring timeline. I&apos;ll respond with
-                availability, scope, and next steps.
+              <p className="mt-4 text-sm text-[color:var(--muted)]">
+                Share your requirements. I&apos;ll reply with scope and timeline.
               </p>
               <div className="mt-6 grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] p-4">
                   <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
                     Focus
                   </p>
-                  <p className="mt-2 text-sm text-[color:var(--text)]">
-                    Product engineering, clean UI, and scalable architecture.
+                  <p className="mt-2 text-xs text-[color:var(--text)]">
+                    Clean UI, scalable builds.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] p-4">
                   <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
                     Turnaround
                   </p>
-                  <p className="mt-2 text-sm text-[color:var(--text)]">
-                    Clear scope, weekly updates, and reliable delivery.
+                  <p className="mt-2 text-xs text-[color:var(--text)]">
+                    Clear scope, weekly updates.
                   </p>
                 </div>
               </div>

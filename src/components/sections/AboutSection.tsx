@@ -1,4 +1,5 @@
 import { portfolioData } from "@/data/portfolio";
+import { Gauge, Layers, Zap } from "lucide-react";
 import { Reveal } from "../animations/Reveal";
 import { AnimatedCounter } from "../ui/AnimatedCounter";
 
@@ -14,7 +15,7 @@ export function AboutSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-4 max-w-3xl font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            Building reliable products with a focus on clarity, performance, and craft.
+            Clear, fast, and reliable product builds.
           </h2>
         </Reveal>
         <div className="mt-6 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -31,7 +32,21 @@ export function AboutSection() {
                   Performance First
                 </span>
               </div>
-              <p className="mt-6 whitespace-pre-line text-[color:var(--muted)]">
+              <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] p-4 text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
+                  <Zap size={16} className="text-[color:var(--accent)]" />
+                  <p className="mt-2">Fast Delivery</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] p-4 text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
+                  <Gauge size={16} className="text-[color:var(--accent)]" />
+                  <p className="mt-2">Performance</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] p-4 text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
+                  <Layers size={16} className="text-[color:var(--accent)]" />
+                  <p className="mt-2">Clean UI</p>
+                </div>
+              </div>
+              <p className="mt-6 whitespace-pre-line text-sm text-[color:var(--muted)]">
                 {portfolioData.about}
               </p>
               <div className="mt-8 flex items-center gap-3 text-sm uppercase tracking-[0.3em] text-[color:var(--muted)]">

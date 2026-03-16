@@ -15,9 +15,7 @@ export function HeroSection() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const heroSummary =
-    "I am a Full Stack Developer with experience in building scalable web and mobile applications. " +
-    "My expertise includes React.js, React Native, Next.js, Node.js, Express, and MongoDB. " +
-    "I enjoy solving real-world business problems by building efficient digital solutions.";
+    "Product-focused Full Stack Developer turning complex problems into clear, usable solutions.";
 
   return (
     <section className="section-surface relative overflow-hidden">
@@ -50,6 +48,15 @@ export function HeroSection() {
                 <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)] shadow-[0_0_12px_var(--glow)]" />
                 {portfolioData.location}
               </span>
+            </div>
+          </Reveal>
+          <Reveal delay={0.17}>
+            <div className="mt-4 inline-flex flex-wrap items-center gap-3 rounded-full border border-white/10 bg-[color:var(--glass)] px-4 py-2 text-[9px] uppercase tracking-[0.24em] text-[color:var(--muted)] sm:text-[10px] sm:tracking-[0.3em]">
+              <span>{portfolioData.availability}</span>
+              <span className="hidden h-3 w-px bg-white/10 sm:inline-block" />
+              <span>IST (GMT+5:30)</span>
+              <span className="hidden h-3 w-px bg-white/10 sm:inline-block" />
+              <span>Replies within 24 hours</span>
             </div>
           </Reveal>
           <Reveal delay={0.18}>

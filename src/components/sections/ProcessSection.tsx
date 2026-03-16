@@ -1,22 +1,23 @@
 "use client";
 
 import { Reveal } from "../animations/Reveal";
+import { Compass, Rocket, Wrench } from "lucide-react";
 
 const steps = [
   {
     title: "Discover",
-    description:
-      "Clarify goals, scope, and success metrics so we build the right thing with confidence.",
+    description: "Goals, scope, and success metrics.",
+    icon: Compass,
   },
   {
     title: "Build",
-    description:
-      "Design, develop, and iterate in focused sprints with clear weekly progress updates.",
+    description: "Design, build, iterate in sprints.",
+    icon: Wrench,
   },
   {
     title: "Launch",
-    description:
-      "Ship, monitor, and refine with performance and reliability in mind from day one.",
+    description: "Ship, monitor, improve.",
+    icon: Rocket,
   },
 ];
 
@@ -31,20 +32,29 @@ export function ProcessSection() {
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="mt-4 max-w-3xl font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            A simple, reliable delivery flow.
+            Simple delivery flow.
           </h2>
         </Reveal>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {steps.map((step, index) => (
             <Reveal key={step.title} delay={0.1 + index * 0.08}>
               <div className="shadow-soft h-full rounded-3xl border border-white/10 bg-[color:var(--glass)] p-6 backdrop-blur-[14px]">
-                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
-                <p className="mt-3 text-sm text-[color:var(--muted)]">
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="rounded-2xl border border-white/10 bg-black/30 p-2 text-[color:var(--accent)]">
+                    <step.icon size={18} />
+                  </span>
+                </div>
+                <h3 className="mt-4 text-xl font-semibold">{step.title}</h3>
+                <p className="mt-2 text-xs text-[color:var(--muted)]">
                   {step.description}
                 </p>
+                <div className="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-[color:var(--muted)]">
+                  <span className="h-2 w-2 rounded-full bg-[color:var(--accent)]/70" />
+                  <span>Step {index + 1}</span>
+                </div>
               </div>
             </Reveal>
           ))}

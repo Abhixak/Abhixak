@@ -12,7 +12,7 @@ export function ExperienceSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-4 font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            Journey through product teams and startups.
+            Recent roles.
           </h2>
         </Reveal>
         <div className="mt-8 space-y-6 border-l border-[color:var(--muted)]/30 pl-6">
@@ -24,9 +24,9 @@ export function ExperienceSection() {
                   {item.range}
                 </p>
                 <h3 className="mt-2 text-xl font-semibold">
-                  {item.role} · {item.company}
+                  {item.role} - {item.company}
                 </h3>
-                <p className="mt-2 text-sm text-[color:var(--muted)]">
+                <p className="mt-2 text-xs text-[color:var(--muted)]">
                   {item.summary}
                 </p>
               </div>

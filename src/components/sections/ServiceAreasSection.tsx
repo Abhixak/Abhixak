@@ -18,7 +18,7 @@ export function ServiceAreasSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-4 font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            Serving India and global clients.
+            India + remote worldwide.
           </h2>
         </Reveal>
         <Reveal delay={0.15}>

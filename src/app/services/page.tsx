@@ -6,6 +6,7 @@ import { ServiceAreasSection } from "@/components/sections/ServiceAreasSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { portfolioData } from "@/data/portfolio";
 import Link from "next/link";
+import { Code2, LayoutDashboard, MonitorSmartphone, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: `Services | ${portfolioData.name}`,
@@ -36,23 +37,23 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Full Stack Web Development",
-    description:
-      "End-to-end web applications using MERN, Next.js, and modern UI/UX practices.",
+    description: "End-to-end web apps with modern stacks.",
+    icon: Code2,
   },
   {
     title: "React & Next.js Frontend",
-    description:
-      "High-performance, SEO-friendly interfaces for business platforms and landing pages.",
+    description: "Fast, SEO-ready interfaces.",
+    icon: MonitorSmartphone,
   },
   {
     title: "React Native Mobile Apps",
-    description:
-      "Cross-platform mobile apps with clean architecture and scalable API integrations.",
+    description: "Cross-platform mobile builds.",
+    icon: Smartphone,
   },
   {
     title: "Admin Dashboards & CRMs",
-    description:
-      "Role-based dashboards, analytics, and internal tools tailored to business workflows.",
+    description: "Dashboards, analytics, CRM tools.",
+    icon: LayoutDashboard,
   },
 ];
 
@@ -90,11 +91,10 @@ export default function ServicesPage() {
             Services
           </span>
           <h1 className="mt-4 max-w-3xl font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            Full stack development services for modern products.
+            Full stack services.
           </h1>
-          <p className="mt-4 max-w-2xl text-[color:var(--muted)]">
-            {portfolioData.name} builds scalable web and mobile applications for clients in
-            India and worldwide, with a focus on performance and clarity.
+          <p className="mt-4 max-w-2xl text-sm text-[color:var(--muted)]">
+            Fast, reliable web and mobile builds.
           </p>
           <Link
             href="/"
@@ -108,7 +108,12 @@ export default function ServicesPage() {
                 key={service.title}
                 className="shadow-soft rounded-3xl border border-white/10 bg-[color:var(--glass)] p-6 backdrop-blur-[14px]"
               >
-                <h2 className="text-lg font-semibold">{service.title}</h2>
+                <div className="flex items-center gap-3">
+                  <span className="rounded-2xl border border-white/10 bg-black/30 p-2 text-[color:var(--accent)]">
+                    <service.icon size={18} />
+                  </span>
+                  <h2 className="text-lg font-semibold">{service.title}</h2>
+                </div>
                 <p className="mt-3 text-sm text-[color:var(--muted)]">
                   {service.description}
                 </p>

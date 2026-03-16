@@ -24,9 +24,9 @@ export function ProjectsSection() {
         </Reveal>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
           <Reveal delay={0.1}>
-            <h2 className="font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-              Projects built for real-world use.
-            </h2>
+          <h2 className="font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
+            Selected, real-world projects.
+          </h2>
           </Reveal>
         </div>
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -56,7 +56,7 @@ export function ProjectsSection() {
                 <div className="mt-6 flex items-center justify-between">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                 </div>
-                <p className="mt-3 text-sm text-[color:var(--muted)]">
+                <p className="mt-3 text-xs text-[color:var(--muted)]">
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">

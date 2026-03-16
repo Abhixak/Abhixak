@@ -3,23 +3,19 @@ import { Reveal } from "../animations/Reveal";
 const faqs = [
   {
     question: "Do you take remote projects globally?",
-    answer:
-      "Yes. I work with clients in India and worldwide, offering remote collaboration with weekly updates.",
+    answer: "Yes. India + global remote.",
   },
   {
     question: "What tech stack do you specialize in?",
-    answer:
-      "I specialize in the MERN stack, React Native, and Next.js for scalable web and mobile applications.",
+    answer: "MERN, React Native, Next.js.",
   },
   {
     question: "Can you build admin dashboards and internal tools?",
-    answer:
-      "Yes. I design and build admin panels, analytics dashboards, and CRM workflows tailored to business needs.",
+    answer: "Yes. Admin panels, analytics, CRM.",
   },
   {
     question: "Do you offer ongoing support after delivery?",
-    answer:
-      "Yes. I provide maintenance, performance optimization, and feature iteration after launch.",
+    answer: "Yes. Maintenance and improvements.",
   },
 ];
 
@@ -34,7 +30,7 @@ export function FaqSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-4 font-[family:var(--font-poppins)] text-3xl font-semibold tracking-[-0.02em] md:text-4xl">
-            Common questions answered.
+            Quick answers.
           </h2>
         </Reveal>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -42,7 +38,7 @@ export function FaqSection() {
             <Reveal key={faq.question} delay={0.15 + index * 0.05}>
               <div className="shadow-soft rounded-3xl border border-white/10 bg-[color:var(--glass)] p-6 backdrop-blur-[14px]">
                 <h3 className="text-base font-semibold">{faq.question}</h3>
-                <p className="mt-3 text-sm text-[color:var(--muted)]">{faq.answer}</p>
+                <p className="mt-3 text-xs text-[color:var(--muted)]">{faq.answer}</p>
               </div>
             </Reveal>
           ))}
