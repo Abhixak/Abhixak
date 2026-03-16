@@ -17,6 +17,10 @@ export function ContactSection() {
     setStatus("sending");
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = formData.get("name")?.toString().trim() ?? "";
+    const email = formData.get("email")?.toString().trim() ?? "";
+    const subject = formData.get("subject")?.toString().trim() ?? "";
+    const message = formData.get("message")?.toString().trim() ?? "";
 
     try {
       const response = await fetch(FORM_ENDPOINT, {
@@ -30,6 +34,10 @@ export function ContactSection() {
         setStatus("success");
         form.reset();
         if (REDIRECT_URL) {
+          const payload = { name, email, subject, message };
+          if (typeof window !== "undefined") {
+            window.sessionStorage.setItem("thankyou-submission", JSON.stringify(payload));
+          }
           window.location.assign(REDIRECT_URL);
         }
       } else {

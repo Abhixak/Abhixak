@@ -1,10 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
 export function TopNav() {
+  const pathname = usePathname();
+  const hashBase = pathname === "/" ? "" : "/";
+
   return (
     <motion.nav
       initial={{ opacity: 0, y: -16 }}
@@ -14,48 +19,50 @@ export function TopNav() {
     >
       <div className="mx-auto flex w-full max-w-6xl flex-nowrap items-center justify-between gap-2 md:gap-3">
         <div className="shadow-soft flex flex-nowrap items-center gap-2 rounded-full border border-white/10 bg-[color:var(--glass)] px-3 py-1.5 backdrop-blur-[14px] md:gap-3 md:px-4 md:py-2">
-          <span
-            className="light-font rounded-full border border-white/10 bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-[0.22em] text-[color:var(--muted)] sm:text-[10px] sm:tracking-[0.3em]"
+          <Link
+            href="/#top"
+            className="light-font rounded-full border border-white/10 bg-black/50 px-2.5 py-1 text-[9px] uppercase tracking-[0.22em] text-[color:var(--muted)] transition hover:text-[color:var(--text)] sm:text-[10px] sm:tracking-[0.3em]"
+            aria-label="Go to home"
           >
             {portfolioData.name}
-          </span>
+          </Link>
           <span className="hidden text-xs text-[color:var(--muted)] md:block">
             {portfolioData.title}
           </span>
           <div className="hidden items-center gap-4 text-xs uppercase tracking-[0.26em] text-[color:var(--muted)] lg:flex">
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#about"
+              href={`${hashBase}#about`}
             >
               About
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#skills"
+              href={`${hashBase}#skills`}
             >
               Skills
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#projects"
+              href={`${hashBase}#projects`}
             >
               Projects
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#education"
+              href={`${hashBase}#education`}
             >
               Education
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#experience"
+              href={`${hashBase}#experience`}
             >
               Journey
             </a>
             <a
               className="transition hover:text-[color:var(--text)]"
-              href="#contact"
+              href={`${hashBase}#contact`}
             >
               Contact
             </a>

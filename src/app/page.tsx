@@ -8,6 +8,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { Footer } from "@/components/sections/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ServiceAreasSection } from "@/components/sections/ServiceAreasSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { portfolioData } from "@/data/portfolio";
@@ -42,7 +43,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative pt-14 md:pt-24">
+    <main id="top" className="relative pt-14 md:pt-24">
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
@@ -54,6 +55,7 @@ export default function Home() {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
+      <ProcessSection />
       <ServiceAreasSection />
       <EducationSection />
       <ExperienceSection />

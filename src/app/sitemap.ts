@@ -1,25 +1,22 @@
-import { portfolioData } from "@/data/portfolio";
 import type { MetadataRoute } from "next";
+import { portfolioData } from "@/data/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = portfolioData.siteUrl.replace(/\/+$/, "");
+  const lastModified = new Date();
+
   return [
     {
-      url: portfolioData.siteUrl,
-      lastModified: new Date(),
+      url: `${baseUrl}/`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${portfolioData.siteUrl}/thank-you`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${portfolioData.siteUrl}/services`,
-      lastModified: new Date(),
+      url: `${baseUrl}/services`,
+      lastModified,
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.7,
     },
   ];
 }

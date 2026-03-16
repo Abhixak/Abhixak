@@ -1,13 +1,15 @@
-import { portfolioData } from "@/data/portfolio";
 import type { MetadataRoute } from "next";
+import { portfolioData } from "@/data/portfolio";
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = portfolioData.siteUrl.replace(/\/+$/, "");
+
   return {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/thank-you"],
     },
-    sitemap: `${portfolioData.siteUrl}/sitemap.xml`,
-    host: portfolioData.siteUrl,
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

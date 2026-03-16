@@ -53,11 +53,47 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: portfolioData.name,
+    jobTitle: portfolioData.title,
+    description: portfolioData.seo.description,
+    url: portfolioData.siteUrl,
+    image: `${portfolioData.siteUrl}${portfolioData.seo.ogImage}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: portfolioData.location,
+      addressCountry: "IN",
+    },
+    sameAs: [portfolioData.social.github, portfolioData.social.linkedin].filter(Boolean),
+  };
+
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: `${portfolioData.name} Portfolio`,
+    url: portfolioData.siteUrl,
+    description: portfolioData.seo.description,
+    publisher: {
+      "@type": "Person",
+      name: portfolioData.name,
+    },
+  };
+
   return (
     <html lang="en">
       <body
         className={`${poppins.variable} ${manrope.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+        />
         {children}
       </body>
     </html>

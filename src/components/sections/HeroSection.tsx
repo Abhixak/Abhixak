@@ -187,7 +187,7 @@ export function HeroSection() {
                             Services
                           </p>
                           <p className="mt-2 text-[color:var(--text)]">
-                            Web Apps · Mobile Apps · Dashboards · APIs
+                            Web Apps - Mobile Apps - Dashboards - APIs
                           </p>
                         </div>
                         <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] px-4 py-3">
@@ -195,7 +195,7 @@ export function HeroSection() {
                             Process
                           </p>
                           <p className="mt-2 text-[color:var(--text)]">
-                            Discover · Build · Launch · Iterate
+                            Discover - Build - Launch - Iterate
                           </p>
                         </div>
                         <div className="rounded-2xl border border-white/10 bg-[color:var(--glass)] px-4 py-3">
@@ -203,7 +203,7 @@ export function HeroSection() {
                             Availability
                           </p>
                           <p className="mt-2 text-[color:var(--text)]">
-                            Open for full-time · Freelance
+                            Open for full-time - Freelance
                           </p>
                         </div>
                       </div>
