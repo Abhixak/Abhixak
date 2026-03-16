@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 import { portfolioData } from "@/data/portfolio";
@@ -81,8 +82,28 @@ export default function RootLayout({
     },
   };
 
+  const isProduction = process.env.NODE_ENV === "production";
+
   return (
     <html lang="en">
+      <head>
+        {isProduction ? (
+          <>
+            <Script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-EV5ET54R39"
+            />
+            <Script id="google-analytics">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-EV5ET54R39');
+              `}
+            </Script>
+          </>
+        ) : null}
+      </head>
       <body
         className={`${poppins.variable} ${manrope.variable} antialiased`}
       >
