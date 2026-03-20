@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 import { portfolioData } from "@/data/portfolio";
+import { GuideBot } from "@/components/visuals/GuideBot";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -116,6 +117,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
         />
         {children}
+        <GuideBot />
       </body>
     </html>
   );

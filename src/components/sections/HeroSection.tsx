@@ -18,7 +18,7 @@ export function HeroSection() {
     "Product-focused Full Stack Developer turning complex problems into clear, usable solutions.";
 
   return (
-    <section className="section-surface relative overflow-hidden">
+    <section id="hero" className="section-surface relative overflow-hidden">
       <div className="absolute left-0 right-0 top-0 h-[70vh] opacity-35 md:inset-0 md:h-auto">
         <HeroCanvas />
       </div>

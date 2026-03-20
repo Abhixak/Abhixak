@@ -13,7 +13,10 @@ export function Footer() {
           >
             Services
           </a>
-          <a className="flex items-center gap-2 transition hover:text-[color:var(--text)]" href="#faq">
+          <a
+            className="flex items-center gap-2 transition hover:text-[color:var(--text)]"
+            href="/#faq"
+          >
             FAQ
           </a>
         </div>

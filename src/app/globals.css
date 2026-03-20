@@ -31,6 +31,7 @@ body {
     radial-gradient(900px 600px at 90% 10%, rgba(247, 192, 106, 0.12), transparent 70%);
 }
 
+
 ::selection {
   background: rgba(240, 138, 36, 0.35);
   color: var(--text);
@@ -103,9 +104,305 @@ body {
   }
 }
 
+.guide-bot {
+  --bot-size: clamp(54px, 5.5vw, 88px);
+  --bot-primary: #42f5e9;
+  --bot-secondary: #2c2a33;
+  --bot-glow: rgba(66, 245, 233, 0.55);
+  --bot-outline: rgba(255, 255, 255, 0.3);
+  position: fixed;
+  right: clamp(12px, 3vw, 28px);
+  bottom: clamp(12px, 3vw, 26px);
+  z-index: 40;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: end;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+  font-family: var(--font-poppins);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: guide-bot-float 4.2s ease-in-out infinite;
+}
+
+.guide-bot--hidden {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.guide-bot__bubble {
+  position: relative;
+  width: min(220px, 58vw);
+  padding: 14px 34px 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(150deg, rgba(18, 16, 26, 0.95), rgba(12, 10, 18, 0.9));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  color: var(--text);
+  font-size: 10px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.guide-bot__bubble,
+.guide-bot__close {
+  pointer-events: auto;
+}
+
+.guide-bot__close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(12, 10, 18, 0.7);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.guide-bot__close:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.guide-bot__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, rgba(18, 16, 26, 0.95), rgba(12, 10, 18, 0.9));
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  transform: rotate(45deg);
+}
+
+.guide-bot__bubble p {
+  margin: 0;
+  padding-right: 6px;
+}
+
+.guide-bot__unit {
+  position: relative;
+  width: var(--bot-size);
+  height: var(--bot-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  animation: none;
+  pointer-events: none;
+}
+
+.guide-bot__unit {
+  justify-content: center;
+}
+
+.guide-bot__head {
+  width: calc(var(--bot-size) * 0.95);
+  height: calc(var(--bot-size) * 0.75);
+  border-radius: 16px;
+  border: 2px solid var(--bot-outline);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(66, 245, 233, 0.18), transparent 45%),
+    linear-gradient(160deg, rgba(22, 20, 30, 0.98), rgba(10, 8, 14, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.35),
+    0 10px 18px rgba(0, 0, 0, 0.35);
+}
+
+.guide-bot__eye {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: radial-gradient(circle, var(--bot-primary), rgba(66, 245, 233, 0.35));
+  box-shadow: 0 0 12px var(--bot-glow);
+  animation: guide-bot-blink 4.2s infinite;
+}
+
+.guide-bot__mouth {
+  position: absolute;
+  bottom: 12px;
+  width: 28px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0 0 18px 18px;
+  transform: scaleX(0.9);
+  animation: guide-bot-smile 3.4s ease-in-out infinite;
+}
+
+@keyframes guide-bot-smile {
+  0%,
+  100% {
+    transform: scaleX(0.9) scaleY(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scaleX(1.05) scaleY(1.05);
+    opacity: 1;
+  }
+}
+
+
+.guide-bot__head {
+  width: 100%;
+  height: calc(var(--bot-size) * 0.42);
+  border-radius: 4px;
+  border: 2px solid var(--bot-outline);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 45%),
+    linear-gradient(160deg, var(--bot-secondary), rgba(18, 16, 22, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.35),
+    0 6px 0 rgba(0, 0, 0, 0.45);
+}
+
+.guide-bot__eye {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: radial-gradient(circle, var(--bot-primary), rgba(66, 245, 233, 0.4));
+  box-shadow: 0 0 10px var(--bot-glow);
+  animation: guide-bot-blink 4.2s infinite;
+}
+
+.guide-bot__eye:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.guide-bot__mouth {
+  position: absolute;
+  bottom: 8px;
+  width: 22px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.guide-bot__tab {
+  position: fixed;
+  right: 0;
+  bottom: clamp(18px, 6vw, 46px);
+  z-index: 41;
+  width: 32px;
+  height: 48px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(160deg, rgba(18, 16, 26, 0.95), rgba(10, 8, 14, 0.9));
+  color: var(--text);
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.guide-bot__tab:hover {
+  transform: translateX(-2px);
+}
+
+@keyframes guide-bot-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes guide-bot-blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.2);
+  }
+}
+
+@media (max-width: 980px) {
+  .guide-bot {
+    --bot-size: clamp(50px, 9vw, 76px);
+    right: clamp(10px, 2.5vw, 20px);
+    bottom: clamp(10px, 2.5vw, 20px);
+  }
+
+  .guide-bot__bubble {
+    width: min(200px, 70vw);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .guide-bot__tab {
+    width: 30px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .guide-bot {
+    --bot-size: clamp(46px, 18vw, 70px);
+    gap: 8px;
+  }
+
+  .guide-bot__bubble {
+    width: min(180px, 80vw);
+    font-size: 8px;
+    letter-spacing: 0.06em;
+  }
+
+  .guide-bot__bubble::after {
+    right: 12px;
+  }
+
+  .guide-bot__tab {
+    width: 28px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor-glow,
-  .particle {
+  .particle,
+  .guide-bot__unit,
+  .guide-bot__eye,
+  .guide-bot__mouth {
     animation: none;
   }
 }
