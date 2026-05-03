@@ -1,4 +1,4 @@
-## Abhishek Kumar — Full Stack Developer Portfolio
+## Abhishek Kumar — Full Stack Developer
 
 Personal portfolio showcasing projects, skills, services, and contact details.
 
